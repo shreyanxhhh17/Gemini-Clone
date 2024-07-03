@@ -1,0 +1,244 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+  }
+  
+  .main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+  }
+  
+  .nav img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
+  .main-container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .main .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+  }
+  
+  .main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+  }
+  
+  .main .greet p {
+    font-weight: 500;
+  }
+  
+  
+  .main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .main .card .img {
+    font-size: 30px;
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .card p {
+    color: #585858;
+    font-size: 17px;
+  }
+  
+  .main .card:hover {
+    background-color: #dfe4ea;
+  }
+  
+  .main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: #f0f4f9;
+    border-radius: 50px;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+  
+  .items input {
+    border: none;
+    outline: none;
+    flex: 1; /* Make input take remaining space */
+    padding: 15px;
+    padding-left: 20px;
+    background-color: #f0f4f9;
+    font-size: 18px;
+    border-radius: 50px;
+  }
+  
+  .icons {
+    margin-left: 55px;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .bottom-info p {
+    font-size: 13px;
+    margin: 25px auto;
+    position: absolute;
+    top: 2.5rem;
+    left: 7rem;
+    color: #585858;
+  }
+  
+  .bottom-info span {
+    text-decoration: underline;
+    vertical-align: baseline;
+    cursor: pointer;
+  }
+  
+  .answer .ans-container {
+    margin-top: 5rem;
+  }
+  
+  .answer .ans-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .answer .ans-container .query {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+  
+  .result {
+    padding: 0px 5%;
+    display: flex;
+    gap: 15px;
+    max-height: 370px; /* Example height, adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .result p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .result::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loader img {
+    width: 50px;
+    height: 50px; 
+    margin-bottom: 10px;
+    animation: pulse 1s ease-in-out infinite;
+  }
+@keyframes pulse {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
+   
+  .loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff); 
+    background-size: 800px 50px;
+    height: 20px;
+    margin: 5px 0; 
+    animation: loader 3s infinite linear;
+  }
+
+  @keyframes loader{
+    0%{
+      background-position: -800px 0px;
+    }
+    100%{
+      background-position: 800px 0px;
+    }
+  }
+  
+  .icon-hide{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+  }
+
+  @media (max-width: 970px) {
+    .items input {
+      width: 100%; 
+      margin-bottom: 10px; 
+    }
+    .icons {
+      justify-content: flex-end; 
+    }
+    .icon-hide {
+      display: none;
+    }
+    .main .cards {
+      display: flex;
+      overflow-x: auto; 
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory; 
+      padding: 10px;
+    }
+  
+    .main .card {
+      flex: 0 0 auto; 
+      /* cursor: grab;  */
+      max-width: 200px;
+    }
+
+  }
