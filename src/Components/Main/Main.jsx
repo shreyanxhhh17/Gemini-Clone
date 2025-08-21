@@ -126,10 +126,6 @@ const Main = ({ setRecentPrompt }) => {
               <IoCompassOutline className="img" />
             </div>
             <div className="card">
-              <p>Briefly summarize the concept: urban planning</p>
-              <IoBulbOutline className="img" />
-            </div>
-            <div className="card">
               <p>Brainstorm team bonding activities for our work retreat</p>
               <IoChatboxOutline className="img" />
             </div>
